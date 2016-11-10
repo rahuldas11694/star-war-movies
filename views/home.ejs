@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+   <% include partials/head.ejs  %>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <% include partials/header.ejs %>
+	<div id ='hero-image'> 
+	<h1 id='hero-title'> <%= title %>   </h1>>
+ 	</div>
+
+ 	<div id="posters-wrapper" class="content-padding clearfix">
+
+    <%  for(var i = 0 ; i<movies.length; i++) { %>
+     <div class="poster"> 
+    <!-- this anchor tag is to for redirecting the particular movie when clicked-->
+     <a href="/star_wars_episode/<%= movies[i].episode_number %>">
+
+	     <img src="/images/<%= movies[i].poster %>" class='img-responsive'>
+	     	<div class="poster-info-overlay">
+	     		<h3><%= movies[i].title %></h3>
+	     		<h4>View More <i class="fa fa-arrow-right"></i></h4>
+	     	</div>
+     	</a>
+
+    </div>
+    <% } %>
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <% include partials/footer.ejs  %>
+    
+
+   <% include partials/scripts.ejs  %>
+
+
+
+  </body>
+</html>
