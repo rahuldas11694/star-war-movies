@@ -4,12 +4,14 @@
   "description": "a basic movie app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "hiiii test in json script",
+    "start": "node Profile"
   },
   "author": "rahul das",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0"
   }
 }
